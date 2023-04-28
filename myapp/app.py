@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 app_ui = ui.page_fluid(
-    ui.h2("Hello Shiny!"),
+    ui.h2("Barcode Sampling Bias"),
     ui.row(
         ui.column(
             2,
