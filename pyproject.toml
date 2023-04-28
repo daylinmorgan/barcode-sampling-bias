@@ -2,12 +2,14 @@
 [tool.pdm.scripts]
 export = "shinylive export myapp site"
 serve = "python3 -m http.server --directory site --bind localhost 8008"
-dev = "shiny run --reload myapp/app.py"
+dev = "shiny run --reload --launch-browser myapp/app.py"
 
 [tool.pdm.dev-dependencies]
 dev = [
     "shiny>=0.3.3",
     "shinylive>=0.0.13",
+    "ruff>=0.0.263",
+    "black>=23.3.0",
 ]
 
 [project]
