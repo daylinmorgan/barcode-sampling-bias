@@ -1,7 +1,13 @@
 from shiny import App, reactive, render, ui
 import matplotlib.pyplot as plt
 
-from simulation import grow, generate_barcodes, generate_growth_rates, sort_outgrow, get_max_barcode
+from simulation import (
+    grow,
+    generate_barcodes,
+    generate_growth_rates,
+    sort_outgrow,
+    get_max_barcode,
+)
 
 app_ui = ui.page_fluid(
     ui.panel_title("Barcode Sampling Bias", "Barcode Sampling Bias"),
@@ -37,6 +43,7 @@ app_ui = ui.page_fluid(
         ),
     ),
 )
+
 
 def simulate(input):
     barcodes = generate_barcodes(start_num=input.diversity())
